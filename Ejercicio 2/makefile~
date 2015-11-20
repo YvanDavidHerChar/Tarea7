@@ -1,0 +1,11 @@
+iteraciones := 20000
+quemados := 5000
+
+datos.dat: mcmc_lotkavolterra.x
+	./mcmc_lotkavolterra.x $(iteraciones) $(quemados) > datos.dat
+	python graficas.py
+
+mcmc_lotkavolterra.x: diferencial.c
+	cc diferencial.c -lgsl -lgslcblas -lm -o mcmc_lotkavolterra.x
+clean:
+	rm datos.dat
