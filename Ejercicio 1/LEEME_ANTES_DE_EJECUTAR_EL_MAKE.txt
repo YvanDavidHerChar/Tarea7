@@ -1,0 +1,1 @@
+HAY UN PROBLEMA.Que no entiendo que porque tengo que ejecutar el make dos veces. El pdf de este punto se demora mucho por lo que decidi que era mejor solo visualizar la piramide de graficas.

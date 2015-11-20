@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.backends.backend_pdf import PdfPages
+import sys
 
 #Sacamos los datos creados en C
 datos = np.genfromtxt("datos.dat")
@@ -32,6 +32,11 @@ mejor_d = d[masPosible]
 #Calculamos la aproximacion
 y_calulado = mejor_a*np.cos((2*np.pi/mejor_d)*x_obs + mejor_b) + mejor_c
 
+#Creamos un arcivo de texto que denota el tiempo en el make
+papitas = open('marcador.txt', "w")
+papitas.write("Hola que mas, no dormi mucho...\n")
+papitas.write("voy a dormir")
+papitas.close()
 #Graficamos la aproximacion con los datos, y tambien todos los pares de parametros.
 fig = plt.figure(figsize=(10,10))
 ax1 = plt.subplot(6,5,21)
